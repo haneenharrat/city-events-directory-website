@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title class="lang" data-en="Event Details" data-ar="تفاصيل الفعالية">تفاصيل الفعالية</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <script src="assets/js/main.js"></script>
+</head>
+
+<body>
+
+  <header class=" text-center">
+    <nav class="navbar navbar-expand-md navcolorr">
+      <div class="navbar-brand">
+        <img src="./assets/img/logo.jpg" class="logo">
+        <span class="title lang" data-en="City Events" data-ar="فعاليات المدينة">فعاليات المدينة</span>
+      </div>
+      <a href="#nvbr" data-bs-toggle="collapse" class="navbar-toggler navbar-toggler-icon"></a>
+      <div id="nvbr" class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link lang" data-en="Main" data-ar="الرئيسية">الرئيسية</a>
+          </li>
+          <li class="nav-item">
+            <a href="events.html" class="nav-link lang" data-en="Activities" data-ar="الفعاليات">الفعاليات</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link lang" data-en="About the Guide" data-ar="عن الدليل">عن الدليل</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link lang" data-en="Contact us" data-ar="اتصل بنا">اتصل بنا</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="d-flex justify-content-end align-items-center gap-1 mt-4 mb-4">
+      <button id="btnAr" class="btn btn-light border rounded-circle p-1">
+        <img src="assets/img/Flag_of_Syria.svg.png" alt="Arabic" width="40" height="30">
+      </button>
+      <button id="btnEn" class="btn btn-light border rounded-circle p-1">
+        <img src="assets/img/en.flag.jpeg" alt="English" width="40" height="30">
+      </button>
+    </div>
+    <div class="form-check form-switch d-flex justify-content-end p-1 ">
+      <input class="form-check-input ms-3" type="checkbox" id="switch" value="yes">
+      <label class="form-check-label " for="switch">dark mode</label>
+    </div>
+  </header>
+
+  <main class="container my-5" id="eventDetails"></main>
+
+  <footer class="-footer">
+    <div class="footer">
+      <div class="footer-right">
+        <h3 class="lang" data-en="Contact Information" data-ar="معلومات التواصل">معلومات التواصل</h3>
+        <span class="ftr lang" data-en="Email:" data-ar="البريد:">البريد:</span>
+        <a href="mailto:info@almadina-events.com" class="email-link lang" data-en="info@almadina-events.com"
+          data-ar="info@almadina-events.com">info@almadina-events.com</a>
+        <br>
+        <span class="ftr lang" data-en="Phone:" data-ar="الهاتف:">الهاتف:</span>
+        <a href="tel:+963411234567" class="phone lang" data-en="+963 41 123 4567" data-ar="+963 41 123 4567">+963 41 123
+          4567</a>
+        <br>
+        <span class="ftr lang" data-en="Address: Latakia - Sports City"
+          data-ar="العنوان: اللاذقية - المدينة الرياضية">العنوان: اللاذقية - المدينة الرياضية</span>
+      </div>
+      <div class="footer-center">
+        <h3 class="lang" data-en="Follow us on" data-ar="تابعنا على">تابعنا على</h3>
+        <a href="https://facebook.com/lattakia.events" class="social-link lang" data-en="Facebook"
+          data-ar="فيسبوك">فيسبوك</a>
+        <a href="https://x.com/lattakia_events" class="social-link lang" data-en="X" data-ar="إكس">إكس</a>
+        <a href="https://instagram.com/lattakia.events" class="social-link lang" data-en="Instagram"
+          data-ar="إنستغرام">إنستغرام</a>
+        <a href="https://youtube.com/c/lattakiaevents" class="social-link lang" data-en="YouTube"
+          data-ar="يوتيوب">يوتيوب</a>
+      </div>
+      <div class="footer-left">
+        <h3 class="lang" data-en="City Events Guide" data-ar="دليل فعاليات المدينة">دليل فعاليات المدينة</h3>
+        <p class="fotleft lang" data-en="&copy; 2025 All rights reserved" data-ar="&copy; 2025 جميع الحقوق محفوظة">
+          &copy; 2025 جميع الحقوق محفوظة
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    window.onload = function () {
+      //...Language switch buttons...
+      var btnAr = document.getElementById("btnAr");
+      var btnEn = document.getElementById("btnEn");
+      var currentLang = "ar";
+      // Set language to Arabic when Arabic button is clicked
+      btnAr.onclick = function () {
+        currentLang = "ar";
+        changeLanguage(currentLang);
+        showEvent(currentLang);
+      };
+      // Set language to English when English button is clicked
+      btnEn.onclick = function () {
+        currentLang = "en";
+        changeLanguage(currentLang);
+        showEvent(currentLang);
+      };
+
+      // Initialize language and event display on page load
+      changeLanguage(currentLang);
+      showEvent(currentLang);
+
+      //..Dark mode toggle..
+      let toggleBtn = document.querySelector("#switch");
+      let bodyEl = document.querySelector("body");
+
+      toggleBtn.addEventListener("change", (event) => {
+        if (event.target.checked) {
+          bodyEl.classList.add("dark");// Add "dark" class when checkbox is checked
+        } else {
+          bodyEl.classList.remove("dark");  // Remove "dark" class when checkbox is unchecked
+        }
+      });
+    };
+
+    //..Function to change language..
+    function changeLanguage(lang) {
+      var elements = document.querySelectorAll(".lang");// all elements with class "lang"
+      elements.forEach(function (el) {
+        var text = el.getAttribute("data-" + lang);//// get the text for selected language
+        if (text) el.innerHTML = text;//// update element text
+      });
+
+      document.documentElement.lang = lang;//// set <html> lang attribute
+      if (lang === "ar") {
+        document.documentElement.dir = "rtl";
+        document.body.classList.remove("text-start");
+        document.body.classList.add("text-end");
+      } else {
+        document.documentElement.dir = "ltr";
+        document.body.classList.remove("text-end");
+        document.body.classList.add("text-start");
+      }
+    }
+
+
+    //...Function to display event details...
+    function showEvent(lang) {
+      var main = document.getElementById("eventDetails");// main container
+      var link = document.location.href;// current URL
+      var parts = link.split("id="); // split URL to get event ID
+      var id = (parts.length > 1) ? Number(parts[1]) : null;
+
+      // Find event with matching ID from events array
+      var found = events.find(function (e) { return e.id === id; });
+
+      if (!found) {
+        // Display message if no event is found
+        if (lang === "ar") main.innerHTML = "<h2 class='text-center mt-5'> لم يتم اختيار فعالية بعد.</h2>";
+        else main.innerHTML = "<h2 class='text-center mt-5'> No event selected.</h2>";
+        return;
+      }
+
+      var html = "";
+
+      //// Display event title
+      html += "<h1 >" + found.title[lang] + "</h1>";
+
+      // Display event date
+      html += "<p class='data-event'><b>";
+      if (lang === "ar") {
+        html += " التاريخ:";
+      } else {
+        html += " Date:";
+      }
+      html += "</b> " + found.date + "</p>";
+
+      // Display event place
+      html += "<p class='data-event'><b>";
+      if (lang === "ar") {
+        html += " المكان:";
+      } else {
+        html += " Place:";
+      }
+      html += "</b> " + found.place[lang] + "</p>";
+
+      // Display event category
+      html += "<p class='data-event'><b>";
+      if (lang === "ar") {
+        html += " التصنيف:";
+      } else {
+        html += " Category:";
+      }
+      html += "</b> " + found.category[lang] + "</p>";
+
+      // Display event description
+      html += "<p class='data-event'>" + found.desc[lang] + "</p>";
+
+
+      // Display event images if available
+      if (found.images && found.images.length > 0) {
+        html += "<section class='container my-5'><h3 class='text-center p-img mb-4'>" + (lang === "ar" ? " معرض الصور" : " Photo Gallery") + "</h3>";
+        html += "<div class='row g-5'>";
+        for (var i = 0; i < found.images.length; i++) {
+          html += "<div class='col-lg-6 col-12 d-flex  centerr'>";
+          html += "<img src='assets/img/" + found.images[i] + "' class='card-img-top' alt=''>";
+          html += "</div>";
+        }
+        html += "</div></section>"
+      }
+
+      // Display event map images if available
+      if (found.images_map && found.images_map.length > 0) {
+        html += "<section class='container my-5'><h3 class='text-center p-img mb-4'>" + (lang === "ar" ? " الموقع" : " Location") + "</h3>";
+        html += "<div class='row g-3'>";
+        for (var j = 0; j < found.images_map.length; j++) {
+          html += "<div class='col-12 d-flex justify-content-center'>";
+          html += "<img src='assets/img/" + found.images_map[j] + "' class='card-img-top' alt=''>";
+          html += "</div>";
+        }
+        html += "</div></section>";
+      }
+
+      // Display related events if available
+      var related = getRelatedEvents(found.id);
+      if (related.length > 0) {
+        html += "<section class='container my-5'><h3 class='text-center p-img mb-4'>" + (lang === "ar" ? " فعاليات ذات صلة" : " Related Events") + "</h3>";
+        html += "<div class='latest-cards'>";
+        for (var k = 0; k < related.length; k++) {
+          var imgSrc = (related[k].images && related[k].images.length > 0) ? related[k].images[0] : "default.jpg";
+          html += "<div class='card shadow-sm'>";
+          html += "<img src='assets/img/" + imgSrc + "' class='card-img-top' alt=''>";
+          html += "<div class='card-body'>";
+          if (lang === "ar") html += "<h5 class='card-title'>" + related[k].title[lang] + "</h5><p class='card-text'>" + related[k].date + "</p><a href='event.html?id=" + related[k].id + "' class='btn btn-warning btncard'>عرض التفاصيل</a>";
+          else html += "<h5 class='card-title'>" + related[k].title[lang] + "</h5><p class='card-text'>" + related[k].date + "</p><a href='event.html?id=" + related[k].id + "' class='btn btn-warning btncard'>View Details</a>";
+          html += "</div></div>";
+        }
+        html += "</div></section>";
+      } else {
+
+      main.innerHTML = html;
+        // Display message if no related events
+        if (lang === "ar") html += "<p class='text-center text-muted related mt-4'>لا توجد فعاليات ذات صلة.</p>";
+        else html += "<p class='text-center text-muted related mt-4'>No related events.</p>";
+      }
+
+      main.innerHTML = html;
+    }
+
+
+
+
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

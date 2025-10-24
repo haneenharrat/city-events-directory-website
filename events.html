@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title class="lang" data-en="Events" data-ar="الفعاليات">الفعاليات</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+
+</head>
+
+<body>
+  <header class="text-center">
+    <nav class="navbar navbar-expand-md navcolorr">
+      <div class="navbar-brand"><img src="./assets/img/logo.jpg" class="logo"><span class="title lang"
+          data-en="City Events" data-ar="فعاليات المدينة"> فعاليات
+          المدينة</span></div>
+      <a href="#nvbr" data-bs-toggle="collapse" class="navbar-toggler navbar-toggler-icon"></a>
+      <div id="nvbr" class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a href="index.html" class="nav-link lang" data-en="Main" data-ar="الرئيسية">
+              الرئيسية</a></li>
+          <li class="nav-item"><a href="events.html" class="nav-link lang" data-en="Activities" data-ar="الفعاليات">
+              الفعاليات</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link lang" data-en="About the evidence"
+              data-ar="عن الدليل"> عن الدليل</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link lang" data-en="Contact us" data-ar="اتصل بنا">اتصل
+              بنا</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="d-flex justify-content-end align-items-center gap-1 mt-4 mb-4">
+      <button id="btnAr" class="btn btn-light border rounded-circle p-1">
+        <img src="assets/img/Flag_of_Syria.svg.png" alt="Arabic" width="40" height="30">
+      </button>
+      <button id="btnEn" class="btn btn-light border rounded-circle p-1">
+        <img src="assets/img/en.flag.jpeg" alt="English" width="40" height="30">
+      </button>
+    </div>
+    <div class="form-check form-switch d-flex justify-content-end p-1 ">
+      <input class="form-check-input ms-3" type="checkbox" id="switch" value="yes">
+      <label class="form-check-label " for="switch">dark mode</label>
+    </div>
+  </header>
+  <main>
+    <h1 class="lang text-center" data-en="All Events" data-ar="جميع الفعاليات"> جميع الفعاليات</h1>
+    <div class="filter">
+      <input type="date" id="filterDate" class="serch-lst">
+      <select id="filterCategory" class="serch-lst">
+        <option value="all" class="lang" data-en="All Categories" data-ar="كل التصنيفات"> كل التصنيفات</option>
+        <option value="Cultural" class="lang" data-en="Cultural" data-ar="ثقافية">ثقافية</option>
+        <option value="Entertainment" class="lang" data-en="Entertainment" data-ar="ترفيهية">ترفيهية</option>
+        <option value="Sports" class="lang" data-en="Sports" data-ar="رياضية">رياضية</option>
+        <option value="Traditional" class="lang" data-en="Traditional" data-ar="تراثية">تراثية</option>
+        <option value="Commercial" class="lang" data-en="Commercial" data-ar="تجارية">تجارية</option>
+      </select>
+      <button id="filterBtn" class="btn bg-warning serch lang text-center " data-en="search" data-ar="بحث"> بحث
+      </button>
+    </div>
+
+
+
+
+    <div class="latest-cards">
+      <div class="card">
+        <img src="assets\img\photo_2025-10-07_16-32-14.jpg" alt="فشل في التحميل" class="card-img-top">
+        <div class="card-body">
+          <h3 class="card-title lang" data-en="AI Conference" data-ar="مؤتمر الذكاء الاصطناعي">مؤتمر الذكاء الاصطناعي
+          </h3>
+          <p class="card-text lang" data-en="2025-11-11" data-ar="2025-11-11">2025-11-11</p>
+          <p class="card-text lang" data-en="Miramar Hotel" data-ar="فندق ميرامار"> فندق ميرامار</p>
+          <p class="card-text lang" data-en="Cultural" data-ar=" ثقافية" data-category="Cultural"> ثقافية</p>
+          <p class="card-text lang"
+            data-en="A conference showcasing the latest developments in Artificial Intelligence and its applications across various fields"
+            data-ar="مؤتمر يستعرض أحدث تطورات الذكاء الاصطناعي وتطبيقاته في مختلف المجالات">مؤتمر يستعرض أحدث تطورات
+            الذكاء الاصطناعي وتطبيقاته في مختلف المجالات</p>
+          <div class="btn btn-warning btncard "><a href="event.html#id=1" title class=" تفاصيل lang"
+              data-en="Full trip details" data-ar="تفاصيل كاملة عن الرحلة">تفاصيل كاملة عن الرحلة </a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets\img\photo_2025-10-07_16-32-11.jpg" alt="فشل في التحميل" class="card-img-top">
+        <div class="card-body">
+          <h3 class="card-title lang" data-en="Tel Frik" data-ar="تل فريك"> تل فريك</h3>
+          <p class="card-text lang" data-en="2025-11-11" data-ar="2025-11-11">2025-11-11</p>
+          <p class="card-text lang" data-en="Kassab" data-ar="كسب"> كسب</p>
+          <p class="card-text lang" data-en="Entertainment" data-ar=" ترفيهية" data-category="Entertainment"> ترفيهية
+          </p>
+          <p class="card-text lang"
+            data-en="An enjoyable trip offering visitors a breathtaking panoramic view of the city and nature"
+            data-ar="رحلة ممتعة تمنح الزوار إطلالة بانورامية خلابة على المدينة والطبيعة">رحلة ممتعة تمنح الزوار إطلالة
+            بانورامية خلابة على المدينة والطبيعة</p>
+          <div class="btn btn-warning btncard "><a href="event.html#id=2" title class=" تفاصيل lang"
+              data-en="Full trip details" data-ar="تفاصيل كاملة عن الرحلة">تفاصيل كاملة عن الرحلة </a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets\img\photo_2025-10-08_02-06-46.jpg" alt="فشل في التحميل" class="card-img-top">
+        <div class="card-body">
+          <h3 class="card-title lang" data-en="Shopping Festivals" data-ar="مهرجانات التسوق"> مهرجانات التسوق</h3>
+          <p class="card-text lang" data-en="2025-11-13" data-ar="2025-11-13">2025-11-13</p>
+          <p class="card-text lang" data-en="Sports City" data-ar="المدينة الرياضية"> المدينة الرياضية</p>
+          <p class="card-text lang" data-en="Commercial" data-ar=" تجارية" data-category="Commercial"> تجارية</p>
+          <p class="card-text lang"
+            data-en="Various markets showcasing local and heritage products in a lively and interactive atmosphere"
+            data-ar="أسواق متنوعة تعرض منتجات محلية وتراثية في أجواء حيوية ومليئة بالتفاعل">أسواق متنوعة تعرض منتجات
+            محلية وتراثية في أجواء حيوية ومليئة بالتفاعل </p>
+          <div class="btn btn-warning btncard "><a href="event.html#id=3" title class=" تفاصيل lang"
+              data-en="Full trip details" data-ar="تفاصيل كاملة عن الرحلة">تفاصيل كاملة عن الرحلة </a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets\img\photo_5_2025-10-08_01-59-20.jpg" alt="فشل في التحميل" class="card-img-top">
+        <div class="card-body">
+          <h3 class="card-title lang" data-en="Theatrical Shows" data-ar="عروض مسرحية"> عروض مسرحية</h3>
+          <p class="card-text lang" data-en="2025-11-14" data-ar="2025-11-14">2025-11-14</p>
+          <p class="card-text lang" data-en="Cultural Center" data-ar="المركز الثقافي"> المركز الثقافي</p>
+          <p class="card-text lang" data-en="Entertainment" data-ar=" ترفيهية" data-category="Entertainment"> ترفيهية
+          </p>
+          <p class="card-text lang"
+            data-en="An enjoyable artistic experience showcasing acting skills and theatrical creativity through live performances"
+            data-ar="تجربة فنية ممتعة تعرض مهارات التمثيل والإبداع المسرحي وذلك عن طريق العروض الحية">تجربة فنية ممتعة
+            تعرض مهارات التمثيل والإبداع المسرحي وذلك عن طريق العروض الحبة</p>
+          <div class="btn btn-warning btncard "><a href="event.html#id=4" title class=" تفاصيل lang"
+              data-en="Full trip details" data-ar="تفاصيل كاملة عن الرحلة">تفاصيل كاملة عن الرحلة </a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets\img\photo_1_2025-10-08_01-59-20.jpg" alt="فشل في التحميل" class="card-img-top">
+        <div class="card-body">
+          <h3 class="card-title lang" data-en="Camping" data-ar="تخييم">تخييم </h3>
+          <p class="card-text lang" data-en="2025-11-11" data-ar="2025-11-11">2025-11-11</p>
+          <p class="card-text lang" data-en="Kassab" data-ar="كسب"> كسب</p>
+          <p class="card-text lang" data-en="Entertainment" data-ar=" ترفيهية" data-category="Entertainment"> ترفيهية
+          </p>
+          <p class="card-text lang"
+            data-en="A two-day camping session surrounded by nature with a warm fire, twinkling stars, and a gentle breeze"
+            data-ar="جلسة لمدة يومين بين أحضان الطبيعة حيث نار دافئة ونجوم تتلألأ ونسيم هادىء">جلسة لمدة يومين بين أحضان
+            الطبيعة حيث نار دافئةو نجوم تتلألأ ونسيم هادىء</p>
+          <div class="btn btn-warning btncard "><a href="event.html#id=5" title class=" تفاصيل lang"
+              data-en="Full trip details" data-ar="تفاصيل كاملة عن الرحلة">تفاصيل كاملة عن الرحلة </a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets\img\photo_2025-10-08_02-08-22.jpg" alt="فشل في التحميل" class="card-img-top">
+        <div class="card-body">
+          <h3 class="card-title lang" data-en="Horse Riding Race" data-ar="سباق ركوب الخيل"> سباق ركوب الخيل</h3>
+          <p class="card-text lang" data-en="2025-11-17" data-ar="2025-11-17">2025-11-17</p>
+          <p class="card-text lang" data-en="Sports City" data-ar="المدينة الرياضية"> المدينة الرياضية</p>
+          <p class="card-text lang" data-en="Sports" data-ar="رياضية" data-category="Sports"> رياضية</p>
+          <p class="card-text lang"
+            data-en="A sports event showcasing horse riding skills and the spirit of competition in an exciting race"
+            data-ar="فعالية رياضية تُبرز مهارة ركوب الخيل وروح المنافسة في سباق مثير للحماس"> فعالية رياضية تُبرز مهارة
+            ركوب الخيل وروح المنافسة في سباق مثير للحماس</p>
+          <div class="btn btn-warning btncard "><a href="event.html#id=6" title class=" تفاصيل lang"
+              data-en="Full trip details" data-ar="تفاصيل كاملة عن الرحلة">تفاصيل كاملة عن الرحلة </a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets\img\photo_6_2025-10-08_01-59-20.jpg" alt="فشل في التحميل" class="card-img-top">
+        <div class="card-body">
+          <h3 class="card-title lang" data-en="Fine Arts Exhibition" data-ar="معرض الفنون الجميلة"> معرض الفنون الجميلة
+          </h3>
+          <p class="card-text lang" data-en="2025-11-18" data-ar="2025-11-18">2025-11-18</p>
+          <p class="card-text lang" data-en="Cultural Center" data-ar="المركز الثقافي"> المركز الثقافي</p>
+          <p class="card-text lang" data-en="Cultural" data-ar=" ثقافية" data-category="Cultural"> ثقافية</p>
+          <p class="card-text lang"
+            data-en="Art and creativity come together in the Fine Arts Exhibition to captivate your senses with the beauty of colors and details"
+            data-ar="فن وابداع يجتمعان في معرض الفنون الجميلة ليأسر حواسكم بجمال الألوان والتفاصيل">فن وابداع يجتمعان في
+            معرض الفنون الجميلة ليأسر حواسكم بجمال الألوان والتفاصيل</p>
+          <div class="btn btn-warning btncard "><a href="event.html#id=7" title class=" تفاصيل lang"
+              data-en="Full trip details" data-ar="تفاصيل كاملة عن الرحلة">تفاصيل كاملة عن الرحلة </a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets\img\photo_2025-10-08_02-04-38.jpg" alt="فشل في التحميل" class="card-img-top">
+        <div class="card-body">
+          <h3 class="card-title lang" data-en="Poetry Evening" data-ar="أمسية شعرية"> أمسية شعرية</h3>
+          <p class="card-text lang" data-en="2025-11-19" data-ar="2025-11-19">2025-11-19</p>
+          <p class="card-text lang" data-en="Cultural Center" data-ar="المركز الثقافي"> المركز الثقافي</p>
+          <p class="card-text lang" data-en="Cultural" data-ar=" ثقافية" data-category="Cultural"> ثقافية</p>
+          <p class="card-text lang"
+            data-en="A poetry evening where poets shine with their creativity in a calm and elegant artistic atmosphere"
+            data-ar="أمسية شعرية يتألق فيها الشعراء بإبداعاتهم وسط أجواء فنية هادئة وراقية">أمسية شعرية يتألق فيها
+            الشعراء بإبداعاتهم وسط أجواء فنية هادئة وراقية</p>
+          <div class="btn btn-warning btncard "><a href="event.html#id=8" title class=" تفاصيل lang"
+              data-en="Full trip details" data-ar="تفاصيل كاملة عن الرحلة">تفاصيل كاملة عن الرحلة </a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets\img\photo_2_2025-10-08_01-59-20.jpg" alt="فشل في التحميل" class="card-img-top">
+        <div class="card-body">
+          <h3 class="card-title lang" data-en="Boat tour in the Seven Lakes" data-ar="جولة بالقارب في البحيرات السبعة">
+            جولة بالقارب في البحيرات السبعة</h3>
+          <p class="card-text lang" data-en="2025-11-20" data-ar="2025-11-20">2025-11-20</p>
+          <p class="card-text lang" data-en="Mashqita" data-ar="مشقيتا"> مشقيتا</p>
+          <p class="card-text lang" data-en="Entertainment" data-ar=" ترفيهية" data-category="Entertainment"> ترفيهية
+          </p>
+          <p class="card-text lang"
+            data-en="A peaceful experience giving you the chance to discover the beauty of Mashqita Lakes amidst the green nature"
+            data-ar="تجربة هادئة تمنحك الفرصة لاكتشاف جمال بحيرات مشقيتا وسط الطبيعة الخضراء">تجربة هادئة تمنحك الفرصة
+            لاكتشاف جمال بحيرات مشقيتا وسط الطبيعة الخضراء</p>
+          <div class="btn btn-warning btncard "><a href="event.html#id=9" title class=" تفاصيل lang"
+              data-en="Full trip details" data-ar="تفاصيل كاملة عن الرحلة">تفاصيل كاملة عن الرحلة </a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets\img\photo_7_2025-10-08_01-59-20.jpg" alt="فشل في التحميل" class="card-img-top">
+        <div class="card-body">
+          <h3 class="card-title lang" data-en="Interactive Heritage Festival" data-ar="مهرجان التراث التفاعلي">مهرجان
+            التراث التفاعلي</h3>
+          <p class="card-text lang" data-en="2025-11-21" data-ar="2025-11-21">2025-11-21</p>
+          <p class="card-text lang" data-en="Sports City" data-ar="المدينة الرياضية"> المدينة الرياضية</p>
+          <p class="card-text lang" data-en="Traditional" data-ar=" تراثية" data-category="Traditional"> تراثية</p>
+          <p class="card-text lang"
+            data-en="Participation in pottery making, shell decorating, and trying traditional foods and dishes"
+            data-ar="المشاركة في صنع الفخار وفن التزيين بالصدف وتجربة ماكولات واطعمة تقليدية">المشاركة في صنع الفخار وفن
+            التزيين بالصدف وتجربة ماكولات واطعمة تقليدية </p>
+          <div class="btn btn-warning btncard "><a href="event.html#id=10" title class=" تفاصيل lang"
+              data-en="Full trip details" data-ar="تفاصيل كاملة عن الرحلة">تفاصيل كاملة عن الرحلة </a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets\img\photo_2_2025-10-08_15-40-43.jpg" alt="فشل في التحميل" class="card-img-top">
+        <div class="card-body">
+          <h3 class="card-title lang" data-en="Friendly match between Hutteen and Tishreen"
+            data-ar="مباراة ودية بين حطين وتشرين"> مبارة ودية بين نادي حطين وتشرين </h3>
+          <p class="card-text lang" data-en="2025-11-22" data-ar="2025-11-22">2025-11-22</p>
+          <p class="card-text lang" data-en="Sports City" data-ar="المدينة الرياضية"> المدينة الرياضية</p>
+          <p class="card-text lang" data-en="Sports" data-ar=" رياضية" data-category="Sports"> رياضية</p>
+          <p class="card-text lang"
+            data-en="Tishreen Club is preparing for a friendly match against their rival Hittin in an exciting game."
+            data-ar="نادي تشرين يستعد لمباراة ودية ضد منافسه حطين في مباراة حماسية">نادي تشرين يستعد لمباراة ودية ضد
+            منافسه حطين في مباراة حماسية
+          </p>
+          <div class="btn btn-warning btncard "><a href="event.html#id=11" title class=" تفاصيل lang"
+              data-en="Full trip details" data-ar="تفاصيل كاملة عن الرحلة">تفاصيل كاملة عن الرحلة </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p id="noResults" class="text-center text-muted my-4 lang" data-en="There are no events matching your selection."
+      data-ar=".لا توجد فعاليات مطابقة لخياراتك" style="visibility:hidden; position: relative;">
+      لا توجد فعاليات مطابقة لخياراتك.
+    </p>
+  </main>
+  <footer class="-footer">
+    <div class="footer">
+      <div class="footer-right">
+        <h3 class="lang" data-en="Contact Information" data-ar="معلومات التواصل">معلومات التواصل</h3>
+        <span class="ftr lang" data-en="Email:" data-ar="البريد:">البريد:</span>
+        <a href="info@almadina-events.com" class="email-link lang" data-en="info@almadina-events.com"
+          data-er="info@almadina-events.com">info@almadina-events.com</a>
+        <span class="ftr lang" data-en="Phone:" data-ar="الهاتف:">الهاتف:</span>
+        <a href="+963 41 123 4567" class="phone lang" data-en="+963 41 123 4567" data-er="+963 41 123 4567">+963 41 123
+          4567</a>
+        <span class="ftr lang" data-en="Address: Latakia - Sports City" data-ar="العنوان: اللاذقية - المدينة الرياضية">
+          العنوان: اللاذقية - المدينة الرياضية</span>
+      </div>
+      <div class="footer-center">
+        <h3 class="lang" data-en="Follow us on" data-ar="تابعنا على">تابعنا على</h3>
+        <a href="https://facebook.com/lattakia.events" class="social-link lang" data-en="Facebook"
+          data-ar="فيسبوك">فيسبوك</a>
+        <a href="https://x.com/lattakia_events" class="social-link lang" data-en="X" data-ar="اكس">إكس</a>
+        <a href="https://instagram.com/lattakia.events" class="social-link lang" data-en="Instagram"
+          data-ar="انستغرام">إنستغرام</a>
+        <a href="https://youtube.com/c/lattakiaevents" class="social-link lang" data-en="YouTube"
+          data-ar="يوتيوب">يوتيوب</a>
+      </div>
+      <div class="footer-left">
+        <h3 class="lang" data-en="City Events Guide" data-ar="دليل فعاليات المدينة">دليل فعاليات المدينة </h3>
+        <p class="fotleft lang" data-en="&copy; 2025 All rights reserved" data-ar="&copy; 2025 جميع الحقوق محفوظة">
+          &copy; 2025 جميع الحقوق محفوظة</p>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
